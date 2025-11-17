@@ -1,0 +1,337 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: azure;
+            height: 750px;
+            width: 500px;
+            text-align: center;
+            font-family: sans-serif;
+            margin-left: 300px;
+            border-radius: 20px;
+          
+        }
+        #colorDisplay{
+            height: 50px;
+            width: 480px;
+            background-color: aqua;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            display: flex;
+            justify-self: center
+        }
+        /* streack section */
+        .streack-section{
+            display: flex;
+            gap:30px;
+            justify-content: center;
+        }
+        .streack-box{
+            height: 120px;
+            width: 170px;
+            border-radius: 10px;
+            background-color: rgb(221, 225, 233);
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        /* button */
+       #newRoundBtn{
+        height: 40px;
+        width: 100px;
+        background-color: darkgoldenrod;
+        color: white;
+        border-radius: 10px;
+        
+       }
+       #easyBtn{
+        height: 40px;
+        width: 100px;
+          border-radius: 10px;
+       }
+       #hardBtn{
+        height: 40px;
+        width: 100px;
+        background-color: brown;
+          border-radius: 10px;
+          color: white;
+       }
+       #resetSteackBtn{
+        height: 40px;
+        width: 100px;
+        background-color: chocolate;
+          border-radius: 10px;
+          color: white;
+       }
+       .Streack-number{
+        font-size: 40px;
+        font-weight: 700;
+       }
+       /* colorbox */
+      #colorBoxContainer{
+        
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+       margin-top: 50px;
+      }
+      .color-box{
+   height: 120px;
+   width: 120px;
+      border: 1px solid black;
+     border-radius: 10px;
+
+      }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="h">
+        <img src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""></div>
+         <img src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""></div>
+          <img src="https://cdn-icons-png.flaticon.com/128/4675/4675168.png" alt=""></div>
+        <header>
+            <h1>The Great</h1>
+            <h1 id="colorDisplay" class="color-display">Rgb Color Guessing Game</h1>
+            <h1>Guessing Game</h1>
+        </header>
+
+        messege dispplay
+        <div id="messege" class="messege">Pick a color!</div>
+
+        <div class="streack-section">
+            <div class="streack-box">
+                <h3>Currunt Streck</h3>
+                <div id="curruntStreck" class=Streack-number>0</div>
+
+            </div>
+
+            <div class="streack-box">
+                <h3>Best Streack</h3>
+                <div id="bestStreack" class="Streack-number">0</div>
+            </div>
+        </div> -->
+
+        <!-- controll buttons -->
+        <!-- <div class="controls">
+            <button id="newRoundBtn" class="control-btn">New Rond</button>
+            <button id="easyBtn" class="mode-btn">Easy</button>
+            <button id="hardBtn" class="mode-btn selected">Hrad</button>
+            <button id="resetSteackBtn" class="control-btn">Reset Streack</button>
+        </div> -->
+
+        <!-- color -->
+        <!-- <div id="colorBoxContainer" class="color-box-container">
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body> -->
+
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+   
+    <style>
+     *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-color: rgb(46, 46, 46);
+    font-family: sans-serif
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+}
+.container h1{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+#colorDisplay{
+    color: black;
+    background-color: white;
+    padding: 5px 75px;
+    width: auto;
+    height: 40px;
+    width:fit-content;
+    border-radius: 10px;
+    display: flex;
+    justify-self: center;
+    margin: 10px;
+}
+.message{
+    text-align: center;
+    margin: 20px;
+}
+.streak-box{
+    background-color: rgb(94, 94, 94);
+    border: 1px solid gray;
+    height:100px;
+    font-family: sans-serif;
+    font-weight: 300;
+    width:190px;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+.streak-number{
+    color: rgb(21, 208, 218);
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+.control-btn{
+    color: white;
+    background-color: rgb(21, 208, 218);
+    border-radius: 6px;
+    /* width: auto; */
+    height:30px;
+    border: none;
+    padding: 15px 10px;
+    font-size: 16px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.streak-section{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.mode-btn{
+    /* width: fit-content; */
+    font-size: 16px;
+    height: 30px;
+    padding: 15px 10px;
+    border-radius: 6px;
+    background-color: rgb(46, 46, 46);
+    border: 1px solid gray;
+    margin: 10px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selected{
+    background-color: white;
+    color: black;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+}
+.color-box{
+    height: 150px;
+    width:150px;
+    background-color: rgb(67, 67, 67);
+    border-radius: 10px;
+    opacity: 0.6;
+    
+}
+.color-box:hover{
+    border: 2px solid gray;
+    cursor: pointer;
+    translate: calc(3);
+    border: 3px solid white;
+}
+.color-box-container{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 500px;
+    gap:10px;
+}
+.container img{
+    height: 50px;
+    width:50px;
+   
+}
+.color-box.disabled {
+    pointer-events: none;
+    opacity: 0.25;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://cdn-icons-png.flaticon.com/128/4926/4926592.png" alt="" class="heart">
+            <img src="https://cdn-icons-png.flaticon.com/128/4926/4926592.png" alt=""class="heart">
+            <img src="https://cdn-icons-png.flaticon.com/128/4926/4926592.png" alt=""class="heart">
+            <img src="https://cdn-icons-png.flaticon.com/128/4926/4926592.png" alt=""class="heart">
+            <img src="https://cdn-icons-png.flaticon.com/128/4926/4926592.png" alt=""class="heart">
+            <h1>THE GREAT</h1>
+            <h1 id="colorDisplay" class="color-display">RGB Color Guessing Game</h1>
+            <h1>GUESSING GAME</h1>
+        </header>
+        <div class="message" id="message">Pick a color!</div>
+        <div class="streak-section">
+            <div class="streak-box">
+                <h3>Current Streak</h3>
+                <div id="currentStreak" class="streak-number">0</div>
+            </div>
+            <div class="streak-box">
+                <h3>Best Streak</h3>
+                <div id="bestStreak" class="streak-number">0</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="newRoundBtn" class="control-btn">NEW ROUND</button>
+            <button id="easyBtn" class="mode-btn">EASY</button>
+            <button id="hardBtn" class="mode-btn selected">HARD</button>
+             <button id="difficultbtn" class="mode-btn">DIFFICULT</button>
+            <button id="resetStreakBtn" class="control-btn">RESET STREAK</button>
+        </div>
+        <div id="colorBoxContainer" class="color-box-container">
+            <div class="color-box">1</div>
+            <div class="color-box">2</div>
+            <div class="color-box">3</div>
+            <div class="color-box">4</div>
+            <div class="color-box">5</div>
+            <div class="color-box">6</div>
+             <div class="color-box">7</div>
+            <div class="color-box">8</div>
+            <div class="color-box">9</div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
